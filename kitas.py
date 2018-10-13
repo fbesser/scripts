@@ -55,9 +55,9 @@ def make_soup(url):
     return BeautifulSoup(r.data, 'html.parser')
 
 
-def check_ingridient(soup, ingridient):
+def check_ingredient(soup, ingredient):
     try:
-        feld = soup.find(id=ingridient).text
+        feld = soup.find(id=ingredient).text
     except AssertionError:
         feld = " "
     return feld
